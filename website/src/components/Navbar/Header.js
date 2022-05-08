@@ -2,6 +2,7 @@ import React from 'react'
 import { Menu } from './Menu';
 import './Header.css';
 import {Button} from '../Button';
+// import logo from '../../assets/Logo.png';
 
 class Header extends React.Component {
 
@@ -13,7 +14,9 @@ class Header extends React.Component {
         return (
             <nav className='Header'>
                 <h1 className='Header-logo'>
-                    React<i className='fab fa-react'></i>
+                    OFF_WORLD
+                    {/* <img src={logo} alt=""></img> */}
+                    
                 </h1>
                 <div className='Menu' onClick={this.click}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>  {/* if clicked is true, show x, else show bars */}

@@ -10,14 +10,14 @@
 .Header-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
+    margin-left: 0px;
     cursor: pointer;
 }
 
-.fa-react {
+/* .logo {
     margin-left: 0.5rem;
-    font-size: 1.6rem;
-}
+    font-size: 25px;
+} */
 
 .nav-menu {
     display: grid;
