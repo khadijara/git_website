@@ -1,8 +1,8 @@
 import React from 'react'
 import { Menu } from './Menu';
 import './Header.css';
-import {Button} from '../Button';
-// import logo from '../../assets/Logo.png';
+import {Button} from '../Button/Button';
+import logo from '../../assets/Logo.png';
 
 class Header extends React.Component {
 
@@ -14,8 +14,8 @@ class Header extends React.Component {
         return (
             <nav className='Header'>
                 <h1 className='Header-logo'>
-                    OFF_WORLD
-                    {/* <img src={logo} alt=""></img> */}
+                    {/* <img src={logo} alt="Logo"  width="70" height="80"></img> */}
+                    Off_World
                     
                 </h1>
                 <div className='Menu' onClick={this.click}>

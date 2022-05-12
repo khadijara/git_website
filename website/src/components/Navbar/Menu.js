@@ -1,25 +1,25 @@
 export const Menu = [
     {
     title: 'Home',
-        url: '/',
+        url: '../pages/Home.js',
             classname: 'header-links',
 
     },
 {
-    title: 'Services',
-        url: '/',
+    title: 'Team',
+        url: '../pages/Team.js',
             classname: 'header-links',
 
     },
 {
-    title: 'Products',
-        url: '/',
+    title: 'AboutUs',
+        url: '../pages/About.js',
             classname: 'header-links',
 
     },
     {
         title: 'ContactUs',
-        url: '/',
+        url: './ContactUs',
         classname: 'header-links',
     },
         {
