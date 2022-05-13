@@ -4,7 +4,7 @@
 
 .containers {
 
-    background-image: url('../../assets/bck.jpg');
+    background-image: url('../../assets/background1.jpg');
     align-items: center;
     width:100vw;
     height:100vh;
@@ -35,7 +35,7 @@ h2{
     align-items: center;
     flex-direction: column;
     height: 80vh;
-    width: 30vw;
+    width: 50vw;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(8.5px);
@@ -46,7 +46,7 @@ h2{
 }
 
 .text {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -79,7 +79,7 @@ a:hover {
     color: #656568;
 }
 input {
-    background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 2rem;
   width: 100%;
@@ -110,5 +110,5 @@ label {
     font-weight: bold;
     color: #e9e7f0;
     margin-bottom: 0.5rem;
-
+    align-items: center;
 }
