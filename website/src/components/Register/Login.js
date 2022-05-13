@@ -89,32 +89,32 @@ export function Login(){
     }
 }
 
-// //     const GoogleLogin = async (user) => {                                     // when you click on google login
-// //         try {
-// //             const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/google/login",  {
-// //                 tokenId: users.tokenId,
-// //                 method: 'POST',
-// //                 headers: {
-// //                     'Content-Type': `application/json`,
-// //                 },
-// //                 body: JSON.stringify(user),
-// //             });
-// //            if (!response.ok) {
-//     throw new Error('Request Failed');
-// }
-// const responseJson = await response.json();
-// console.log(responseJson);
-// //             Navigate("/off_World");   
-// //             // missing
-// //     } catch (error) {                                                    //if there is an error
-// //          console.error('Error:', error.message);
-// //     }
-// // }
+    const GoogleLogin = async (user) => {                                     // when you click on google login
+        try {
+            const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/google/login",  {
+            //    tokenId: user.tokenId,
+                method: 'GET',
+                headers: {
+                    'Content-Type': `application/json`,
+                },
+            });
+           if (!response.ok) {
+    throw new Error('Request Failed');
+}
+
+         //   Navigate("/off_World");   
+            // missing
+    } catch (error) {                                                    //if there is an error
+        console.error('Error:', error.message);
+    }
+}
 
 
     return(
         <>
-            
+            <div >
+            <Link to={'/off_World'} > Go Back</Link>
+            </div>
             <div className='container'>
                 <h1>Login</h1>
 
@@ -132,14 +132,15 @@ export function Login(){
                 <div className='button'>
                     <Button> Login </Button>                    
                 </div>
-                <a href="./Signup.js">Forgot Your Password?</a>
+                {/* <a href="./Signup.js">Forgot Your Password?</a> */}
+                <h2>OR</h2>
             </form>
-            <h2>OR</h2>
-            <div className='row'>
+            
+            <div >
                 {/* <GoogleLogin buttonText="Login with Google" onSubmit={GoogleLogin} /> */}
-                
+                <Button onClick={GoogleLogin}> Login with Google </Button>
             </div>
-            <p className='ptxt'>Doesn't have an account?<Link to="./Signup.js">Register here!</Link></p>
+            <p className='ptxt'>Doesn't have an account?<Link to={'/Signup'}> Register Here!</Link></p>
             </div>
             </>
     );

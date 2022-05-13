@@ -13,6 +13,9 @@ body {
     justify-content: center;
 }
 
+h2{
+  text-align: center;
+}
 
 .row {
     background: linear-gradient(to right, #14163c 0%, #434549 79%);

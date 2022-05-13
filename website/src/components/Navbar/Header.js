@@ -1,8 +1,11 @@
+
+
 import React from 'react'
 import { Menu } from './Menu';
 import './Header.css';
 import {Button} from '../Button/Button';
 import logo from '../../assets/Logo.png';
+import {Link}  from 'react-router-dom';
 
 class Header extends React.Component {
 
@@ -33,7 +36,7 @@ class Header extends React.Component {
                     })}
 
                 </ul>
-                <Button> Register </Button>
+                <Link to="/login"><Button>Register </Button></Link>
             </nav>
         )
     }

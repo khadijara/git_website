@@ -62,19 +62,19 @@ export function Signup() {
 
     const Submit = async (e) => {                                         //when you submit the form
         e.preventDefault();                                             //prevent the default behavior of the form
-        const name = username.current.value;
-        const email = mail.current.value;
-        const password = pwd.current.value;
+        const Name = username.current.value;
+        const Email = mail.current.value;
+        const Password = pwd.current.value;
 
-        console.log(name, email, password);
+        console.log(Name, Email, Password);
         const user = {
-            name,
-            email,
-            password
+            Name,
+            Email,
+            Password
         };
         fetchRegister(user);
     }
-    
+
     const fetchRegister = async (user) => {
         try {
             const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/register", {
@@ -120,7 +120,7 @@ export function Signup() {
                 </div>
             </form>
 
-            <p className='ptxt'>Already have an account? <Link to="./Login.js">Login</Link></p>
+            <p className='ptxt'>Already have an account? <Link to="/login">Login</Link></p>
         </div>
 
     );
