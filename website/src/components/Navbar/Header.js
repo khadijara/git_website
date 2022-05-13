@@ -27,8 +27,8 @@ class Header extends React.Component {
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {Menu.map((item) => {
                         return (
-                            <li>
-                                <a key={item.id} className={item.classname} href={item.url}>
+                            <li key={item.id}>
+                                <a  className={item.classname} href={item.url}>
                                     {item.title}
                                 </a>
                             </li>

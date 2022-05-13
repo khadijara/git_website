@@ -11,9 +11,13 @@ export function Video() {
             <video autoPlay loop muted id="svideo">
                 <source src={homeVideo} type="video/mp4" />
             </video>
-            <div className='animate'>
-                <h1 id="hello">
+            <div className='txt'>
+                <h1 id="Title">
                 </h1>
+                <h2> Welcome to Off_World</h2>
+                <p id='subtitle'>
+                    We say "Hello" to the world in more than 10 Languages.
+                </p>
             </div>
         </div>
     )

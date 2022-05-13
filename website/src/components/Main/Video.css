@@ -12,25 +12,39 @@
     object-fit: contain;
 }
 
-.Video .animate {
+.txt {
     text-align: left;
     position: absolute;
     margin: auto;
     width: 100%;
     height: 100%;
-    top: 40vh;
-    margin-left: 80px;
+    top: 25vh;
+    margin-left: 180px;
 }
 
-.Video .animate h1{
-    font-size: 4rem;
+.Video .txt h1{
+    font-size: 6rem;
     color: #fff;
 }
 
+.Video .txt h2{
+    font-size: 3rem;
+    color: #fff;
+    text-align: left;
+    
+}
+
+.Video .txt p{
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: left;
+    
+}
 #Title:before{
     content: "";
-    animation: animate 5s linear infinite;
+    animation: animate 7s linear infinite;
 }
+
 
 @keyframes animate {
     0% {
@@ -38,9 +52,6 @@
     }
     20% {
         content: "Hola";
-    }
-    20% {
-        content: "Bonjour";
     }
     30% {
         content: "Ciao";
@@ -57,5 +68,16 @@
     70% {
         content: "안녕하세요";
     }
-
+    80% {
+        content: "nǐn hǎo";
+    }
+    90% {
+        content: "olá";
+    }
+    100% {
+        content: "اسلام علیکم";
+    }
+    110% {
+        content: "Bonjour";
+    }
 }

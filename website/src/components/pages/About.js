@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Navbar from "../Navbar/Header";
+import Footer from '../Footer/Footer';
 
 export function About() {
     return (
 <>
     <Navbar />
-    <h1>About Us</h1>
+    <Footer />
+    
 </>
 
     );

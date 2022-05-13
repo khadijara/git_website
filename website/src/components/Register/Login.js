@@ -94,6 +94,7 @@ export function Login(){
             const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/google/login",  {
             //    tokenId: user.tokenId,
                 method: 'GET',
+                mode: 'no-cors', 
                 headers: {
                     'Content-Type': `application/json`,
                 },

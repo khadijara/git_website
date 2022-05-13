@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from "../Navbar/Header";
 import Video from '../Main/Video';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 export function Home() {
     return (
@@ -10,7 +10,7 @@ export function Home() {
 
     <Navbar />
     <Video />
- {/* //   <Footer /> */}
+    <Footer />
 </>
 
     );

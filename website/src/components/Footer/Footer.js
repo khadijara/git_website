@@ -1,70 +1,79 @@
 import React from 'react';
 import  logo from '../../assets/Logo.png';
 import {FooterArrayCl1 , FooterArrayCl2, FooterArrayCl3} from './FooterArray';
+import './Footer.css';
 export function Footer(){
         return(
-            <>
-            <div className="footer">
+            
+                <>
+                <div className="footer">
                 <div className="footer-content">
-                    <div className="footer-content-left">
-                        <h1>Alan Turing</h1>
-                         <img src={logo} alt="Logo"  width="70" height="80"></img>
-                    </div>
-                    <div className="footer-content-right-col1">
-                    <ul >
-                    {FooterArrayCl1.map((item) => {
-                        return (
-                            <li>
-                                <a key={item.id} className={item.classname} href={item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
+                    <h1 className="footer-content-left">
+                        Alan Turing</h1>
+                    <img src={logo} alt="Logo" width="70" height="80"></img>
+                </div>
 
-                </ul>
-                    </div>
-                    <div className="footer-content-right-col2">
-                    <ul >
-                    {FooterArrayCl2.map((item) => {
-                        return (
-                            <li>
-                                <p key={item.id} >
-                                    {item.title}
-                                </p>
-                            </li>
-                        )
-                    })}
+                <div className="footer-content-right-col1">
+                    
+                    <ul>
+                    <h1 className='heading'>Links</h1>
+                        {FooterArrayCl1.map((item) => {
+                            return (
+                                
+                                <li key={item.id}>
+                                    <a className={item.classname} href={item.url}>
+                                        {item.title}
+                                    </a>
+                                </li>
+                                
+                            );
+                        })}
 
-                </ul>
-                    </div>
-                    <div className="footer-content-right-col3">
-                    <ul >
-                    {FooterArrayCl3.map((item) => {
-                        return (
-                            <li>
-                                <a key={item.id}  href={item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
+                    </ul>
+                </div>
 
-                </ul>
-                    </div>
+                <div className="footer-content-right-col2">
+                    <ul>
+                    <h1 className='heading'>Have Questions?</h1>
+                        {FooterArrayCl2.map((item) => {
+                            return (
+                                <li key={item.id}>
+                                    <a>
+                                        {item.title}
+                                    </a>
+                                </li>
+                            );
+                        })}
+
+                    </ul>
+                </div>
+
+                <div className="footer-content-right-col3">
+                    <ul>
+                    <h1 className='heading'>Socials</h1>
+                        {FooterArrayCl3.map((item) => {
+                            return (
+                                <li key={item.id}>
+                                    <a href={item.url}>
+                                        {item.title}
+                                    </a>
+                                </li>
+                            );
+                        })}
+
+                    </ul>
                 </div>
             </div>
-
             <div className='copyright'>
-                <div className='container'>
-                    <p> 
-                    <p>© 2020 Off_World. All rights reserved.</p>
-                    </p>
+                    <div className='footer'>
+
+                        <p className='copyright1'>© 2022 Alan_Turing. All rights reserved.</p>
+
+                    </div>
                 </div>
-            </div>
+                    </>
+                     );
 
-            </>
-        )
-}
+                    }
 
-export default Footer;
+                    export default Footer;

@@ -7,7 +7,7 @@ import './App.css';
   import Contact from './components/pages/ContactUs';
   import Team from './components/pages/Team';
   import About from './components/pages/About';
-  // import Footer from './components/Footer/Footer';
+  import Footer from './components/Footer/Footer';
   
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     <Route path={'/Contact'} element={<Contact />} />
     <Route path={'/About'} element={<About />} />
     <Route path={'/Team'} element={<Team />} />
-    {/* <Route path={'/Footer'} element={<Footer />} /> */}
+    <Route path={'/Footer'} element={<Footer />} />
     </Routes>
     </BrowserRouter>
   );
