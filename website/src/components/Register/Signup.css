@@ -107,3 +107,21 @@ label {
     margin-bottom: 0.5rem;
 
 }
+
+.error {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  background-color: rgb(230, 94, 94);
+  color: black;
+}
+
+
+
+.success {
+  background: rgba(7, 255, 7, 0.15);
+  color: #f6eded;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
