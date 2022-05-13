@@ -12,7 +12,7 @@
     object-fit: contain;
 }
 
-.Video .text {
+.Video .animate {
     text-align: left;
     position: absolute;
     margin: auto;
@@ -22,7 +22,7 @@
     margin-left: 80px;
 }
 
-.Video .text h1{
+.Video .animate h1{
     font-size: 4rem;
     color: #fff;
 }

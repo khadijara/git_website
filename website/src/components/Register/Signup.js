@@ -76,13 +76,14 @@ export function Signup() {
     }
 
     const fetchRegister = async (user) => {
+        console.log(user);
         try {
             const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ user }),
+                body: JSON.stringify(user),
             });
             if (!response.ok) {
                 throw new Error('Request Failed');
@@ -95,22 +96,27 @@ export function Signup() {
     }
 
     return (
-
+        <>
+        <div className='container1'>
+            <div >
+            <Link to={'/off_World'} > Go Back</Link>
+            </div>
+        
         <div className="container">
             <h2>Register</h2>
             <form onSubmit={Submit}>
-                <div className='text'>
+                <div className='texts'>
                     <label>UserName</label>
                     <input type="text" placeholder="Enter name" ref={username} onChange={(e) => setNameInput(e.target.value)} value={nameInput}
                     className={`${nameValid === false ? errors.error : ''} ${nameValid === true ? errors.success : ''}`}/>
                     
                 </div><br></br>
-                <div className='text'>
+                <div className='texts'>
                     <label>Email Address</label>
                     <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}
                     className={`${emailValid === false ? errors.error : ''} ${emailValid === true ? errors.success : ''}`}/>
                 </div><br></br>
-                <div className='text'>
+                <div className='texts'>
                     <label>Password</label>
                     <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}
                     className={`${pwdvalid === false ? errors.error : ''} ${pwdvalid === true ? errors.success : ''}`}/>
@@ -122,7 +128,8 @@ export function Signup() {
 
             <p className='ptxt'>Already have an account? <Link to="/login">Login</Link></p>
         </div>
-
+        </div>
+</>
     );
 }
 export default Signup;

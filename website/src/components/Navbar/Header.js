@@ -25,10 +25,10 @@ class Header extends React.Component {
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>  {/* if clicked is true, show x, else show bars */}
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {Menu.map((item, index) => {
+                    {Menu.map((item) => {
                         return (
                             <li>
-                                <a className={item.classname} href={item.url}>
+                                <a key={item.id} className={item.classname} href={item.url}>
                                     {item.title}
                                 </a>
                             </li>

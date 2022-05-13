@@ -11,8 +11,8 @@ export function Video() {
             <video autoPlay loop muted id="svideo">
                 <source src={homeVideo} type="video/mp4" />
             </video>
-            <div className='text'>
-                <h1 id="Title">
+            <div className='animate'>
+                <h1 id="hello">
                 </h1>
             </div>
         </div>

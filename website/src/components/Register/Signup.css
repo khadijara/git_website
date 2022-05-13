@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    
 }
 
-body {
-    background-image: url('../../assets/backgroundSignup.avif');
+.container1 {
+  background-image: url('../../assets/backgroundSignup.avif');
     align-items: center;
     width: 100vw;
     height: 100vh;

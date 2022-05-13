@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-body {
+.containers {
+
     background-image: url('../../assets/bck.jpg');
     align-items: center;
     width:100vw;

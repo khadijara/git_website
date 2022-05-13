@@ -103,7 +103,7 @@ export function Login(){
 }
 
          //   Navigate("/off_World");   
-            // missing
+        
     } catch (error) {                                                    //if there is an error
         console.error('Error:', error.message);
     }
@@ -112,6 +112,7 @@ export function Login(){
 
     return(
         <>
+        <div className='containers'>
             <div >
             <Link to={'/off_World'} > Go Back</Link>
             </div>
@@ -119,12 +120,12 @@ export function Login(){
                 <h1>Login</h1>
 
             <form onSubmit={Submit}>
-                <div className='text'>
+                <div className='texts'>
                     <label htmlFor='email'>Email Adress</label>
                     <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}/>
                 </div ><br></br>
 
-                <div className='text'>
+                <div className='texts'>
                     <label>Password</label>
                     <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}/>
                 </div><br></br>
@@ -132,7 +133,6 @@ export function Login(){
                 <div className='button'>
                     <Button> Login </Button>                    
                 </div>
-                {/* <a href="./Signup.js">Forgot Your Password?</a> */}
                 <h2>OR</h2>
             </form>
             
@@ -142,6 +142,7 @@ export function Login(){
             </div>
             <p className='ptxt'>Doesn't have an account?<Link to={'/Signup'}> Register Here!</Link></p>
             </div>
+        </div>
             </>
     );
 }

@@ -1,4 +1,4 @@
-.Header {
+nav.Header {
     background: linear-gradient(90deg, rgb(77, 76, 92), 0%, rgb(48, 47, 53) 100%);
     height: 80px;
     display: flex;
