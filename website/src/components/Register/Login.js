@@ -123,12 +123,15 @@ export function Login(){
             <form onSubmit={Submit}>
                 <div className='texts'>
                     <label htmlFor='email'>Email Adress</label>
-                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}/>
+                    {/* set the value of the input to the state of the form */}
+                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}/>  
+                
                 </div ><br></br>
 
                 <div className='texts'>
                     <label>Password</label>
-                    <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}/>
+                     {/* set the value of the input to the state */}
+                    <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}/> 
                 </div><br></br>
 
                 <div className='button'>
@@ -138,7 +141,6 @@ export function Login(){
             </form>
             
             <div >
-                {/* <GoogleLogin buttonText="Login with Google" onSubmit={GoogleLogin} /> */}
                 <Button onClick={GoogleLogin}> Login with Google </Button>
             </div>
             <p className='ptxt'>Doesn't have an account?<Link to={'/Signup'}> Register Here!</Link></p>

@@ -10,7 +10,7 @@ export function Footer(){
                 <div className="footer-content">
                     <h1 className="footer-content-left">
                         Alan Turing</h1>
-                    <img src={logo} alt="Logo" width="70" height="80"></img>
+                    <img src={logo} alt="Logo" width="120" height="110" ></img>
                 </div>
 
                 <div className="footer-content-right-col1">

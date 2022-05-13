@@ -1,9 +1,9 @@
 
-    .container {
+    .map_container {
       position: relative;
       min-height: 400px;
     }
-    .map__card {
+    .map {
       position: absolute;
       right: 10%;
       bottom: 10%;
@@ -13,13 +13,14 @@
       max-width: 300px;
       border-radius: 12px;
     }
-    .map__card__heading {
+    .map-heading {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
-    .map__card__link {
+    .map-link {
       display: inline-block;
       font-size: 1.6rem;
       margin-top: 3rem;
       text-decoration: underline;
+      color: var(--light-blue);
     }

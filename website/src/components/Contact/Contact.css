@@ -1,0 +1,125 @@
+/* Contact Video and heading Styling */
+.contact {
+    height: 10%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#sContact{
+    position: relative;
+    width: 100%;
+    height: 70;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contact h1 {
+    font-size: 6rem;
+    color: rgb(190, 182, 182);
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 45vh;
+    text-align: center;
+}
+/* Contact Form Styling */
+
+
+.contact-form {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+label {
+    font-size: 1.6rem;
+    color: var(--light-blue);
+}
+
+input,textarea {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid var(--light-blue);
+    background-color: rgb(222, 222, 230);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--light-blue);
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: 1.2rem;
+}
+
+.container2 {  /* container for the form */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    color: #050505;
+}
+
+.col-md-12 {
+    background: linear-gradient(to right, #14163c 0%, #434549 79%);
+    text-transform: uppercase; 
+    letter-spacing: 0.1rem;
+    width: 70%;
+    height: 10rem;
+
+    color: white;
+    border-radius: 2rem; 
+     cursor: pointer;
+    text-align: center;
+}
+textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+.submitF {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--light-blue);
+    color: var(--deep-dark);
+    font-size: 1.6rem;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Contact Support Form Styling */
+
+.row1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    position: relative;
+    gap: 4rem;
+    margin-left: 10rem;
+    
+}
+
+
+
+.col-md-8 {
+    width: 100%;
+    max-width: 600px;
+}
+
+.col-md-4 {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+}
