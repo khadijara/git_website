@@ -1,0 +1,141 @@
+/* Team image and heading Styling */
+.team {
+    height: 10%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#steam{
+    position: relative;
+    width: 100%;
+    height: 50;
+    object-fit: cover;
+
+}
+
+.team h1 {
+    font-size: 6rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 60vh;
+    text-align: center;
+}
+
+h2{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    margin-top: 1px;
+    background: linear-gradient(to right, #14163c 0%, #434549 79%);
+    
+}
+
+.section1 {
+    display: block;
+    margin-left: 20%;
+    margin-right: 30%;
+}
+
+.list {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.list .imageList {
+    list-style-type: none;
+    border-radius: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 1rem;
+    text-align: center;
+}
+
+.imagecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal {
+    position: absolute;
+    box-shadow: 0.2px 0.6px 0.5px 0.5px rgb(0 0 0 / 50%);
+    width: auto;
+    max-width: 800px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 4px;
+    padding: 3rem 4rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.btn-close {
+    position: absolute;
+    right: 2%;
+    top: 4%;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.imageT {
+    width: 100%;
+    object-fit: cover;
+        margin-bottom: 50%;
+    margin-left: 20%;
+}
+
+.titleT {
+    font-size: 1.5rem;
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 37vh;
+    text-align: center;
+}
+
+.titlep {
+    font-size: 1.5rem;
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 47vh;
+    text-align: center;
+}

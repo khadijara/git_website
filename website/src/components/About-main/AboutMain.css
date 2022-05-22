@@ -1,0 +1,77 @@
+.about {
+    width: 100%;
+    height: 80vh;
+}
+
+.vision h1 {
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 130vh;
+    text-align: center;
+}
+
+.vision blockquote{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    width: 758px;
+    height: 100%;
+    top: 150vh;
+    margin-right: 14rem;
+    text-align: center;
+    font-style: italic;
+    position: absolute;
+    margin-left: 22%;
+}
+
+.pvision {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    width: 720px;
+    height: 100%;
+    top: 170vh;
+    margin-right: 14rem;
+    text-align: center;
+    position: absolute;
+    margin-left: 22%;
+}
+
+.vision .who {
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 214vh;
+    text-align: center;
+}
+
+.ppvision {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    height: 100%;
+    top: 230vh;
+    margin-right: 11rem;
+    text-align: center;
+    position: absolute;
+    margin-left: 18%;
+}
+
+.what {
+    top: 232.5vh;
+    position: absolute;
+    margin-left: 53rem;
+}

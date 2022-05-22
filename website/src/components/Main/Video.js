@@ -14,7 +14,7 @@ export function Video() {
             <div className='txt'>
                 <h1 id="Title">
                 </h1>
-                <h2> Welcome to Off_World</h2>
+                <h3> Welcome to Off_World</h3>
                 <p id='subtitle'>
                     We say "Hello" to the world in more than 10 Languages.
                 </p>

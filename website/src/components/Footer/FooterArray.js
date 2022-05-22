@@ -45,10 +45,5 @@ export const FooterArrayCl3 = [
         id: 2,
         title: 'Instagram',
         url: 'https://twitter.com/offworld',
-    },
-    {
-        id: 3,
-        title: 'Twitter',
-        url: 'https://www.instagram.com/offworld/',
     }
 ]

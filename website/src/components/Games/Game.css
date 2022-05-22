@@ -1,0 +1,39 @@
+.gamep {
+    margin-left: 10%;
+}
+
+#game1 {
+    margin-left: 10%;
+    width: 60%;
+    height: 20%;
+    margin-right: 60%;
+}
+
+#game2 {
+    
+    width: 60%;
+    height: 20%;
+    margin-right: 90%;
+}
+
+.pgame {
+    width: 500px;
+    margin-left: 9%;
+}
+
+.pgame1 {
+    width: 500px;
+    margin-right: 79%;
+}
+
+#game {
+    margin-left: 15%;
+    width: 30%;
+    height: 20%;
+    margin-right: 60%;
+}
+
+.pgames {
+    width: 500px;
+    margin-left: 14%;
+}

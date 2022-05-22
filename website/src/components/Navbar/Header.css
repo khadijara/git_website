@@ -1,5 +1,5 @@
 nav.Header {
-    background: linear-gradient(90deg, rgb(77, 76, 92), 0%, rgb(48, 47, 53) 100%);
+    background: linear-gradient(to right, #1c1e3f 0%, #1f232b 79%);
     height: 80px;
     display: flex;
     justify-content: center;

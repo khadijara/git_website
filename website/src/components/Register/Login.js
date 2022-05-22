@@ -137,7 +137,7 @@ export function Login(){
                 <div className='button'>
                     <Button> Login </Button>                    
                 </div>
-                <h2>OR</h2>
+                <h1>OR</h1>
             </form>
             
             <div >

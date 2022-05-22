@@ -18,18 +18,14 @@ export function ContactHelp() {
             <ContactForm />
             </div>
             <div className="col-md-4">
-                <h3>Contact</h3>
                 <p>
-                    <strong>Address:</strong> 123 Main Street, Anytown, CA 12345
+                    <strong>Address:</strong> Placa Del Nord 14, 08024 Barcelona Spain
                 </p>
                 <p>
-                    <strong>Phone:</strong> (123) 456-7890
+                    <strong>Phone:</strong> 932 92 21 18
                 </p>
                 <p>
-                    <strong>Fax:</strong> (123) 456-7890
-                </p>
-                <p>
-                    <strong>Email:</strong> email
+                    <strong>Email:</strong> gracia-noreply@sallenet.es
                 </p>
             </div>
         </div>

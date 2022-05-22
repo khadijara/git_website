@@ -2,7 +2,7 @@
 
         display: flex;
         gap: 2rem;
-        background: linear-gradient(90deg, rgb(19, 19, 24), 0%, rgb(48, 47, 53) 100%);
+        background: linear-gradient(to right, #14163c 0%, #434549 79%);
 
     }
 
@@ -14,26 +14,30 @@
     .footer-content img {
 
         margin-left: 120px;
+    margin-top: 3rem;
     }
 
 .footer-content-right-col1,
 .footer-content-right-col2,
 .footer-content-right-col3 {
     flex: 1;
+    margin-top: 1rem;
 }
 
 .footer-content-left {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     margin-left: 40px;
+    margin-top: 1rem;
 }
 
 .copyright {
-    background: linear-gradient(90deg, rgb(77, 76, 92), 0%, rgb(48, 47, 53) 100%);
+    background: linear-gradient(to right, #14163c 0%, #434549 79%);
     text-align: center;
     padding: 1rem 0;
     padding: 1rem;
-    margin-top: 1px;
+    margin-top: 2px;
+    font-weight: bold;
 }
 
 .copyright1 {

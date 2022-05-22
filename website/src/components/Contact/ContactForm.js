@@ -1,35 +1,46 @@
-import {React, useState} from 'react';
+import { React, useRef } from 'react';
 import './Contact.css';
-import {Button} from '../Button/Button';
+import { Button } from '../Button/Button';
+import emailjs from "emailjs-com";
 
 export function ContactForm() {
 
-    // create state variables for the contact form inputs and set them to empty strings by default.
-    const [Formname, setFormName] = useState('');
-    const [Formemail, setFormEmail] = useState('');
-    const [Formmessage, setFormMessage] = useState('');
 
-    return(
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_7y7jw9b', 'template_hvr6p2n', form.current, 'vSwKlC1gWwW1EdoeR')
+            .then((result) => {
+                console.log(result.text);
+                alert('Message sent successfully');
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+    return (
+
         <>
-         <div className="form">
-            <form >
+            <div className="form" >
+            <form ref={form} onSubmit={sendEmail}>
                 <div className='contact-form'>
                     <label>Name</label>
-                    <input type="text" placeholder="Enter name"  onChange={(e) => setFormName(e.target.value)} value={Formname}
+                    <input className="InputValue" type="text" placeholder="Enter name" name="user_name" 
                     />                    
                 </div>
                 <div className='contact-form'>
                     <label>Email</label>
-                    <input type="text" placeholder="Enter Email"  onChange={(e) => setFormEmail(e.target.value)} value={Formemail}
+                    <input type="text"className="InputValue" placeholder="Enter Email" name="user_email" 
                     />
                 </div>
                 <div className='contact-form'>
                     <label>Message</label>
-                    <textarea type="text" placeholder="Enter Message"  onChange={(e) => setFormMessage(e.target.value)} value={Formmessage}
+                    <textarea type="text" className="InputValue" name="message" placeholder="Enter Message"
                     />
                 </div>
-                <div className='button'>
-                    <Button className="submitF"> Submit </Button>
+                <div >
+                    <Button type="submit" className="submitF" >Send</Button>
                 </div>
             </form>
         </div>
