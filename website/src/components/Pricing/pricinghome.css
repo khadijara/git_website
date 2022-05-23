@@ -4,13 +4,12 @@
     flex-direction: column;
     height: 100vh;
     width: 30vw;
-    background: linear-gradient(to top, rgba(255,0,0,0), rgba(75, 29, 48, 0.179));
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(86, 41, 60, 0.179));
+    box-shadow: 0 8px 32px 0 rgba(193, 194, 214, 0.37);
     backdrop-filter: blur(8.5px);
-    /* -webkit-backdrop-filter: blur(8.5px); */
+    -webkit-backdrop-filter: blur(8.5px);
     border-radius: 10px;
-    color: #000000;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .head {
@@ -37,4 +36,8 @@ h4 {
     text-align: center;
     margin-top: 3%;
     font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+    
 }

@@ -3,15 +3,16 @@ import React from 'react';
 import './Game.css';
 import image from '../../assets/squad.jpg';
 import '../Pricing/pricinghome.css';
-import image1 from '../../assets/post scriptum.jpg'
+import image1 from '../../assets/post scriptum.jpg';
+
 export function Game(){
         return(
             <>
-            <h1 className='head'>Our Games</h1>
+            <h1 className='head'>Our Plans</h1>
             <p className='gamep'>We are proud of what we do and especially proud of our games and games we helped to realize. 
                 So take your time, check out our games and see what we have been working on.
             </p>
-            <div  className='row1'>
+            <div  className='gamerow'>
             <div className='game1'>
             <img src={image} alt="Logo" id='game1' ></img>
             <p className='pgame'>

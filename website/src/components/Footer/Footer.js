@@ -2,6 +2,7 @@ import React from 'react';
 import  logo from '../../assets/Logo.png';
 import {FooterArrayCl1 , FooterArrayCl2, FooterArrayCl3} from './FooterArray';
 import './Footer.css';
+
 export function Footer(){
         return(
             
@@ -10,7 +11,7 @@ export function Footer(){
                 <div className="footer-content">
                     <h1 className="footer-content-left">
                         Alan Turing</h1>
-                    <img src={logo} alt="Logo" width="130" height="130" ></img>
+                    <img src={logo} alt="Logo" width="140" height="140" ></img>
                 </div>
 
                 <div className="footer-content-right-col1">
@@ -20,11 +21,11 @@ export function Footer(){
                         {FooterArrayCl1.map((item) => {
                             return (
                                 
-                                <li key={item.id}>
+                                <h1 key={item.id}>
                                     <a className={item.classname} href={item.url}>
                                         {item.title}
                                     </a>
-                                </li>
+                                </h1>
                                 
                             );
                         })}
@@ -37,11 +38,11 @@ export function Footer(){
                     <h1 className='heading'>Have Questions?</h1>
                         {FooterArrayCl2.map((item) => {
                             return (
-                                <li key={item.id}>
+                                <h1 key={item.id}>
                                     <a>
                                         {item.title}
                                     </a>
-                                </li>
+                                </h1>
                             );
                         })}
 
@@ -53,11 +54,11 @@ export function Footer(){
                     <h1 className='heading'>Socials</h1>
                         {FooterArrayCl3.map((item) => {
                             return (
-                                <li key={item.id}>
+                                <h1 key={item.id}>
                                     <a href={item.url}>
                                         {item.title}
                                     </a>
-                                </li>
+                                </h1>
                             );
                         })}
 

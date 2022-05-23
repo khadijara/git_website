@@ -57,7 +57,7 @@
         content: "Ciao";
     }
     40% {
-        content: "Hai";
+        content: "привет";
     }
     50% {
         content: "你好";
@@ -69,7 +69,7 @@
         content: "안녕하세요";
     }
     80% {
-        content: "nǐn hǎo";
+        content: "Bonjour";
     }
     90% {
         content: "olá";
@@ -77,7 +77,23 @@
     100% {
         content: "اسلام علیکم";
     }
-    110% {
-        content: "Bonjour";
+}
+
+@media screen and (max-width: 960px) {
+    .txt {
+        text-align: left;
+        position: absolute;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        top: 20vh;
+        margin-left: 180px;
     }
+    .Video .txt h3{
+        font-size: 3rem;
+        color: #fff;
+        text-align: left;
+        
+    }
+
 }

@@ -13,6 +13,11 @@ class Header extends React.Component {
     click = () => {
         this.setState({clicked: !this.state.clicked}) //if clicked is true, set it to false, else set it to true
     }
+
+    
+
+
+    
     render() {
         return (
             <nav className='Header'>

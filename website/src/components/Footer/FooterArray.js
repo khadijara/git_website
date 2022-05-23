@@ -30,20 +30,14 @@ export  const FooterArrayCl2 = [
     },
     {
         id: 3,
-        title: 'gracia-noreply@sallenet.es',
+        title: 'khadija.rehman@gracia.lasalle.cat',
     }
 ]
 
 export const FooterArrayCl3 = [
     {
         id: 1,
-        title: 'Facebook',
-        url: 'https://www.facebook.com/offworld/',
-        
-    },
-    {
-        id: 2,
         title: 'Instagram',
-        url: 'https://twitter.com/offworld',
+        url: 'https://www.instagram.com/offworldturing/',
     }
 ]

@@ -14,26 +14,26 @@ export function PricingHome(){
                         {Basic.map((item) => {
                             return (
                                 
-                                <p key={item.id}>
+                                <h1 key={item.id}>
                                     <p className='ptext'>
                                         {item.title}
                                     </p>
-                                </p>
+                                </h1>
                                 
                             );
                         })}
                         <Button ><Link to={'/Contact'}>Contact Us</Link> </Button>
                     </div>
                     <div className='cont col-md-3'>
-                        <h4>Premium</h4>
+                        <h4>Standard</h4>
                         {Standard.map((item) => {
                             return (
                                 
-                                <p key={item.id}>
+                                <h1  key={item.id}>
                                     <p className='ptext'>
                                         {item.title}
                                     </p>
-                                </p>
+                                </h1>
                                 
                             );
                         })}

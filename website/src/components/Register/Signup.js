@@ -30,7 +30,7 @@ export function Signup() {
         return () => {
             clearTimeout(timer);
         }
-    }, [EmailInput, previousInput]);
+    }, [EmailInput, previousInput]); 
 
     useEffect(() => {
         if (previousPasswd === passwordInput) {
@@ -86,10 +86,11 @@ export function Signup() {
                 body: JSON.stringify(user),
             });
             if (!response.ok) {
-                throw new Error('Request Failed');
+                throw new Error('You are Already Logged In');
             }
             const responseJson = await response.json();
             console.log(responseJson);
+            alert("Successfully Registered");
         } catch (error) {
             console.error('Error:', error.message);
         }
@@ -98,12 +99,12 @@ export function Signup() {
     return (
         <>
         <div className='container1'>
-            <div >
+            <div className='goback'>
             <Link to={'/off_World'} > Go Back</Link>
             </div>
         
         <div className="container">
-            <h2>Register</h2>
+            <h1>Register</h1>
             <form onSubmit={Submit}>
                 <div className='texts'>
                     <label>UserName</label>

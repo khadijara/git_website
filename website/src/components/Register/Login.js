@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Login.css';
 import {Button} from '../Button/Button';
 // import { GoogleLogin } from 'react-google-login';
-import { Link, Navigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux'
 
 export function Login(){
 
@@ -15,6 +15,7 @@ export function Login(){
     const [pwdvalid, setPwdIsValid] = useState(null);
     const mail = useRef();
     const pwd = useRef();
+
 
 
     useEffect(() => {        //when you change the input, it will change the state
@@ -57,7 +58,7 @@ export function Login(){
         };
         fetchlogin(user);
 
-        const token = {
+        let token = {
             token: `Token: ${fetchlogin(user)}`
         };
         // Save token to localStorage
@@ -70,7 +71,7 @@ export function Login(){
             const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/login", { 
                 method: 'POST',
                 headers: {
-                    'Content-Type': `application/json`,
+                    'Content-Type': 'application/json',
                 }, 
                 body:  JSON.stringify(user),
                 
@@ -80,10 +81,7 @@ export function Login(){
             }
             const responseJson = await response.json();
             console.log(responseJson);
-
-           // Navigate("/off_World");                                           //go to the home page
-            // missing
-
+            alert("You are logged in" + user.Email);
     } catch (error) {                                                      //if there is an error
         console.error('Error:', error.message);
     }
@@ -110,13 +108,43 @@ export function Login(){
     }
 }
 
+const logout = async () => {                                         //when you submit the form
+        
+    try {
+        const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/logout/:id", { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }, 
+            body:  JSON.stringify(),
+            
+        });
+        if (!response.ok) {
+            console.log("You are not logged in");
+        }
+
+
+} catch (error) {                                                      //if there is an error
+    console.error('Error:' + error.message);
+}
+}
+
 
     return(
         <>
         <div className='containers'>
-            <div >
+            <div className='goback'>
             <Link to={'/off_World'} > Go Back</Link>
             </div>
+            <div className='logout'>
+            {/* {
+                    token
+                    ? <Link to="/" onClick={logout}>Logout</Link>
+                    :<li><Link to="/login"><i className="fas fa-user"></i> Sign in</Link></li>
+                } */}
+            <Link to="/off_World" onClick={logout}>Logout</Link>
+            </div>
+            
             <div className='container'>
                 <h1>Login</h1>
 
@@ -124,8 +152,9 @@ export function Login(){
                 <div className='texts'>
                     <label htmlFor='email'>Email Adress</label>
                     {/* set the value of the input to the state of the form */}
-                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}/>  
-                
+                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}
+/>  
+                    
                 </div ><br></br>
 
                 <div className='texts'>
@@ -137,7 +166,7 @@ export function Login(){
                 <div className='button'>
                     <Button> Login </Button>                    
                 </div>
-                <h1>OR</h1>
+                <h1 className='or'>OR</h1>
             </form>
             
             <div >

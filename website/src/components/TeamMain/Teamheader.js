@@ -8,10 +8,10 @@ import './Team.css';
 import TeamList from './TeamList';
 
 const TeamData = [
-    { id: 1, text: 'FrontEnd Developer', title: 'Gerard Marquina', url: [gerard],  linkedIn:'' },
-    { id: 2, text: 'BackEnd Developer', title: 'Alex Andreba', url: [alex] , linkedIn:''},
-    { id: 3, text: 'FrontEnd Developer',title: 'Xavi Moya', url: [xavi], linkedIn:'' },
-    { id: 4, text: 'BackEnd Developer', title: 'Khadija Rehman', url: [khadija], linkedIn:'' },
+    { id: 1, text: 'FrontEnd Developer', title: 'Gerard Marquina', url: [gerard] },
+    { id: 2, text: 'BackEnd Developer', title: 'Alex Andreba', url: [alex] },
+    { id: 3, text: 'FrontEnd Developer',title: 'Xavi Moya', url: [xavi] },
+    { id: 4, text: 'BackEnd Developer', title: 'Khadija Rehman', url: [khadija]},
   ];
 export function Teamheader(){
     const [team, setteam] = useState(TeamData);
@@ -24,7 +24,7 @@ export function Teamheader(){
         </div>
         <main>
         <header>
-            <h2>Meet Our Team</h2>
+            <h1 className='headTeam'>Meet Our Team</h1>
         </header>        
         <section>
         <TeamList items={team}/>

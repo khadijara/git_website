@@ -12,7 +12,7 @@ export const Basic = [
         title: 'Size: 2GB',
     },
     {
-        id: 4,
+        id: 4, 
         title: 'Price: 10€',
     },
     {

@@ -25,7 +25,7 @@ export function ContactHelp() {
                     <strong>Phone:</strong> 932 92 21 18
                 </p>
                 <p>
-                    <strong>Email:</strong> gracia-noreply@sallenet.es
+                    <strong>Email:</strong> khadija.rehman@gracia.lasalle.cat
                 </p>
             </div>
         </div>

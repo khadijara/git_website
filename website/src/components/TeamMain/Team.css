@@ -85,7 +85,7 @@ h2{
 .modal {
     position: absolute;
     box-shadow: 0.2px 0.6px 0.5px 0.5px rgb(0 0 0 / 50%);
-    width: auto;
+    width: 50%;
     max-width: 800px;
     background-color: rgb(211, 211, 211);
     border-radius: 4px;
@@ -114,8 +114,9 @@ h2{
 .imageT {
     width: 100%;
     object-fit: cover;
-        margin-bottom: 50%;
-    margin-left: 20%;
+    margin-bottom: 40%;
+    margin-left: 40%;
+    
 }
 
 .titleT {
@@ -125,8 +126,9 @@ h2{
     margin: auto;
     width: 100%;
     height: 100%;
-    top: 37vh;
+    top: 30vh;
     text-align: center;
+    color: black;
 }
 
 .titlep {
@@ -136,6 +138,28 @@ h2{
     margin: auto;
     width: 100%;
     height: 100%;
-    top: 47vh;
+    top: 40vh;
     text-align: center;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .team h1 {
+    font-size: 6rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 30vh;
+    text-align: center;
+}
+}
+
+.headTeam {
+    text-align: center;
+    font-size: 4rem;
 }
