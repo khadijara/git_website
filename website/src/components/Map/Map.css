@@ -42,3 +42,8 @@
     margin-left: 45rem;
     }
 
+    @media screen and (max-width: 960px) {
+      .map-link {
+        margin-left: 40rem;
+      }
+    }
