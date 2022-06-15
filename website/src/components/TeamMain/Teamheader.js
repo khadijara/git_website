@@ -10,8 +10,8 @@ import TeamList from './TeamList';
 const TeamData = [
     { id: 1, text: 'FrontEnd Developer', title: 'Gerard Marquina', url: [gerard] },
     { id: 2, text: 'BackEnd Developer', title: 'Alex Andreba', url: [alex] },
-    { id: 3, text: 'FrontEnd Developer',title: 'Xavi Moya', url: [xavi] },
-    { id: 4, text: 'BackEnd Developer', title: 'Khadija Rehman', url: [khadija]},
+    { id: 3, text: 'Backend Developer',title: 'Xavi Moya', url: [xavi] },
+    { id: 4, text: 'Frontend Developer', title: 'Khadija Rehman', url: [khadija]},
   ];
 export function Teamheader(){
     const [team, setteam] = useState(TeamData);

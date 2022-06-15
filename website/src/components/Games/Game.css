@@ -2,6 +2,20 @@
     margin-left: 10%;
 }
 
+.gamerow {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    position: relative;
+    gap: 4rem;
+    margin-left: 5rem;
+    
+}
 #game1 {
     margin-left: 10%;
     width: 60%;
@@ -28,7 +42,7 @@
 }
 
 #game {
-    margin-left: 15%;
+    margin-left: 10%;
     width: 30%;
     height: 20%;
     margin-right: 60%;
@@ -36,7 +50,7 @@
 
 .pgames {
     width: 500px;
-    margin-left: 14%;
+    margin-left: 10%;
 }
 
 @media screen and (max-width: 960px) {

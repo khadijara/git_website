@@ -4,14 +4,12 @@
 
 .containers {
 
-    background-image: url('../../assets/background1.jpg');
     align-items: center;
-    width:100vw;
     height:100vh;
-    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+      width: 100%;
 }
 
 h2{

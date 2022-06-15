@@ -3,7 +3,6 @@ import './Login.css';
 import {Button} from '../Button/Button';
 // import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
-import {useSelector} from 'react-redux'
 
 export function Login(){
 
