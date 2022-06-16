@@ -3,6 +3,7 @@ import './Login.css';
 import {Button} from '../Button/Button';
 // import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
+import logincss from './login.module.css';
 
 export function Login(){
 
@@ -36,7 +37,7 @@ export function Login(){
         }
         const timer = setTimeout(() => {
             setpreviousPasswd(passwordInput);
-            setPwdIsValid(passwordInput.trim() > 6);  //set the validation of the password to the value of the input
+            setPwdIsValid(passwordInput.length > 6);  //set the validation of the password to the value of the input
         });
 
         return () => {
@@ -151,7 +152,9 @@ const logout = async () => {                                         //when you 
                 <div className='texts'>
                     <label htmlFor='email'>Email Adress</label>
                     {/* set the value of the input to the state of the form */}
-                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}
+                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => 
+                        setEmailInput(e.target.value)} value={EmailInput}
+                        className={`${emailValid === false ? logincss.invalid : ''} ${emailValid === true ? logincss.valid : ''}`}
 />  
                     
                 </div ><br></br>
@@ -159,7 +162,10 @@ const logout = async () => {                                         //when you 
                 <div className='texts'>
                     <label>Password</label>
                      {/* set the value of the input to the state */}
-                    <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}/> 
+                    <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => 
+                        setpasswordInput(e.target.value)} value={passwordInput}
+                        className={`${pwdvalid === false ? logincss.invalid : ''} ${pwdvalid === true ? logincss.valid : ''}`}
+                        /> 
                 </div><br></br>
 
                 <div className='button'>

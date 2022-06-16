@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import errors from './Signup.css';
 import { Link } from 'react-router-dom';
-
+import logincss from './login.module.css';
 
 export function Signup() {
 
@@ -38,7 +38,7 @@ export function Signup() {
         }
         const timer = setTimeout(() => {
             setpreviousPasswd(passwordInput);
-            setPwdIsValid(passwordInput.trim() > 6);  //set the validation of the password to the value of the input
+            setPwdIsValid(passwordInput.length > 6);  //set the validation of the password to the value of the input
         });
 
         return () => {
@@ -109,18 +109,21 @@ export function Signup() {
                 <div className='texts'>
                     <label>UserName</label>
                     <input type="text" placeholder="Enter name" ref={username} onChange={(e) => setNameInput(e.target.value)} value={nameInput}
-                    className={`${nameValid === false ? errors.error : ''} ${nameValid === true ? errors.success : ''}`}/>
+                     className={`${nameValid === false ? logincss.invalid : ''} ${nameValid === true ? logincss.valid : ''}`}
+                    />
                     
                 </div><br></br>
                 <div className='texts'>
                     <label>Email Address</label>
                     <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}
-                    className={`${emailValid === false ? errors.error : ''} ${emailValid === true ? errors.success : ''}`}/>
+                     className={`${emailValid === false ? logincss.invalid : ''} ${emailValid === true ? logincss.valid : ''}`}
+                     />
                 </div><br></br>
                 <div className='texts'>
                     <label>Password</label>
                     <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}
-                    className={`${pwdvalid === false ? errors.error : ''} ${pwdvalid === true ? errors.success : ''}`}/>
+                     className={`${pwdvalid === false ? logincss.invalid : ''} ${pwdvalid === true ? logincss.valid : ''}`}
+                    />
                 </div><br></br>
                 <div className='button'>
                     <button type="submit" className="row">Register</button>
