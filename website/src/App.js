@@ -8,6 +8,7 @@ import './App.css';
   import Team from './components/pages/Team';
   import About from './components/pages/About';
   import Footer from './components/Footer/Footer';
+  import Update from './components/Register/Update';
   
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path={'/off_World'} element={<Home />} />
     <Route path={'/login'} element={<Login />} />
     <Route path={'/Signup'} element={<Signup />} />
+    <Route path={'/update'} element={<Update />} />
     <Route path={'/Contact'} element={<Contact />} />
     <Route path={'/About'} element={<About />} />
     <Route path={'/Team'} element={<Team />} />

@@ -4,6 +4,7 @@ import {Button} from '../Button/Button';
 // import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
 import logincss from './login.module.css';
+import Navbar from '../Navbar/Header';
 
 export function Login(){
 
@@ -15,7 +16,7 @@ export function Login(){
     const [pwdvalid, setPwdIsValid] = useState(null);
     const mail = useRef();
     const pwd = useRef();
-
+    
 
 
     useEffect(() => {        //when you change the input, it will change the state
@@ -45,7 +46,8 @@ export function Login(){
         }
     }, [passwordInput, previousPasswd]);
 
-    const Submit = async (e) => {                                         //when you submit the form
+    const Submit = async (e) => {   
+                                            //when you submit the form
         e.preventDefault();                                             //prevent the default behavior of the form
 
         const Email = mail.current.value;
@@ -56,8 +58,7 @@ export function Login(){
             Email,
             Password
         };
-        fetchlogin(user);
-
+        fetchlogin(user);  
         let token = {
             token: `Token: ${fetchlogin(user)}`
         };
@@ -108,10 +109,12 @@ export function Login(){
     }
 }
 
-const logout = async () => {                                         //when you submit the form
+const logout = async (id) => {                                         //when you submit the form
+        //   const id = localStorage.getItem('LoginUser:');
+
         
     try {
-        const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/logout/:id", { 
+        const response = await fetch(`https://turing-salle-server.herokuapp.com/api/auth/logout/${id}`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,11 +130,14 @@ const logout = async () => {                                         //when you 
 } catch (error) {                                                      //if there is an error
     console.error('Error:' + error.message);
 }
+        
 }
 
 
     return(
         <>
+        <Navbar />
+        <Link to="/update" >Update</Link>
         <div className='containers'>
             <div className='goback'>
             <Link to={'/off_World'} > Go Back</Link>
@@ -142,7 +148,7 @@ const logout = async () => {                                         //when you 
                     ? <Link to="/" onClick={logout}>Logout</Link>
                     :<li><Link to="/login"><i className="fas fa-user"></i> Sign in</Link></li>
                 } */}
-            <Link to="/off_World" onClick={logout}>Logout</Link>
+            <Link to="#" onClick={logout}>Logout</Link>
             </div>
             
             <div className='container'>

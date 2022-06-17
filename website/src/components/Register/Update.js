@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logincss from './login.module.css';
-import './Signup.css';
 
-export function Signup() {
+export function Update() {
 
     const [previousInput, setpreviousInput] = useState('');
-    const [EmailInput, setEmailInput] = useState('');
+    const [EmailUpdate, setEmailUpdate] = useState('');
     const [emailValid, setEmailIsValid] = useState(null);
     const [nameInput, setNameInput] = useState('');
     const [nameValid, setvalidName] = useState(null);
@@ -19,18 +18,18 @@ export function Signup() {
 
 
 
-    useEffect(() => {        //when you change the input, it will change the state
-        if (previousInput === EmailInput) {
+    useEffect(() => {      
+        if (previousInput === EmailUpdate) {
             return;
         }
         const timer = setTimeout(() => {
-            setpreviousInput(EmailInput);
-            setEmailIsValid(EmailInput.includes('@') && EmailInput.includes('.'));  //set the state of the form to the value of the input
+            setpreviousInput(EmailUpdate);
+            setEmailIsValid(EmailUpdate.includes('@') && EmailUpdate.includes('.'));  
         });
         return () => {
             clearTimeout(timer);
         }
-    }, [EmailInput, previousInput]); 
+    }, [EmailUpdate, previousInput]); 
 
     useEffect(() => {
         if (previousPasswd === passwordInput) {
@@ -38,7 +37,7 @@ export function Signup() {
         }
         const timer = setTimeout(() => {
             setpreviousPasswd(passwordInput);
-            setPwdIsValid(passwordInput.length > 6);  //set the validation of the password to the value of the input
+            setPwdIsValid(passwordInput.length > 6);  
         });
 
         return () => {
@@ -60,8 +59,8 @@ export function Signup() {
         }
     }, [nameInput, previousInput]);
 
-    const Submit = async (e) => {                                         //when you submit the form
-        e.preventDefault();                                             //prevent the default behavior of the form
+    const Submit = async (e) => {                                         
+        e.preventDefault();                                             
         const Name = username.current.value;
         const Email = mail.current.value;
         const Password = pwd.current.value;
@@ -72,27 +71,24 @@ export function Signup() {
             Email,
             Password
         };
-        fetchRegister(user);
+        UpdateProfile(user);
     }
 
-    const fetchRegister = async (user) => {
+    const UpdateProfile = async (user) => {
         console.log(user);
         try {
-            const response = await fetch("https://turing-salle-server.herokuapp.com/api/auth/register", {
-                method: 'POST',
+            const response = await fetch("https://turing-salle-server.herokuapp.com/api/user/update", {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(user),
             });
-            if (!response.ok) {
-                throw new Error('You are Already Logged In');
-            }
+
             const responseJson = await response.json();
             console.log(responseJson);
-            alert("Successfully Registered");
+            alert("Successfully Updated");
         } catch (error) {
-            console.error('Error:', error.message);
         }
     }
 
@@ -104,36 +100,34 @@ export function Signup() {
             </div>
         
         <div className="container">
-            <h1>Register</h1>
+            <h1>Update Profile</h1>
             <form onSubmit={Submit}>
                 <div className='texts'>
-                    <label>UserName</label>
+                    <label>New Name:</label>
                     <input type="text" placeholder="Enter name" ref={username} onChange={(e) => setNameInput(e.target.value)} value={nameInput}
                      className={`${nameValid === false ? logincss.invalid : ''} ${nameValid === true ? logincss.valid : ''}`}
                     />
                     
                 </div><br></br>
                 <div className='texts'>
-                    <label>Email Address</label>
-                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailInput(e.target.value)} value={EmailInput}
+                    <label>New Email Address</label>
+                    <input type="text" placeholder="Enter Email" ref={mail} onChange={(e) => setEmailUpdate(e.target.value)} value={EmailUpdate}
                      className={`${emailValid === false ? logincss.invalid : ''} ${emailValid === true ? logincss.valid : ''}`}
                      />
                 </div><br></br>
                 <div className='texts'>
-                    <label>Password</label>
+                    <label>New Password</label>
                     <input type="password" placeholder="Enter password" ref={pwd} onChange={(e) => setpasswordInput(e.target.value)} value={passwordInput}
                      className={`${pwdvalid === false ? logincss.invalid : ''} ${pwdvalid === true ? logincss.valid : ''}`}
                     />
                 </div><br></br>
                 <div className='button'>
-                    <button type="submit" className="row">Register</button>
+                    <button type="submit" className="row">Update</button>
                 </div>
             </form>
-
-            <p className='ptxt'>Already have an account? <Link to="/login">Login</Link></p>
         </div>
         </div>
 </>
     );
 }
-export default Signup;
+export default Update;
