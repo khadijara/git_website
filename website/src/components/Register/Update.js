@@ -71,26 +71,25 @@ export function Update() {
             Email,
             Password
         };
-        UpdateProfile(user);
-    }
-
-    const UpdateProfile = async (user) => {
-        console.log(user);
-        try {
-            const response = await fetch("https://turing-salle-server.herokuapp.com/api/user/update", {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(user),
-            });
-
-            const responseJson = await response.json();
-            console.log(responseJson);
-            alert("Successfully Updated");
-        } catch (error) {
+        if (EmailUpdate === '' || nameInput === '' || passwordInput === '') {
+            alert('Please fill all the fields');
         }
+        else if (emailValid === false) {
+            alert('Please enter a valid email');
+        }
+        else if (nameValid === false) {
+            alert('Please enter a valid name');
+        }
+        else if (pwdvalid === false) {
+            alert('Please enter a valid password');
+        }
+        else {
+            console.log(user);
+        }
+
     }
+
+
 
     return (
         <>

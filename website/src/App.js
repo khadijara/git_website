@@ -9,6 +9,7 @@ import './App.css';
   import About from './components/pages/About';
   import Footer from './components/Footer/Footer';
   import Update from './components/Register/Update';
+  import Ranking from './components/cart/cart';
   
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
     <Route path={'/About'} element={<About />} />
     <Route path={'/Team'} element={<Team />} />
     <Route path={'/Footer'} element={<Footer />} />
+    <Route path={'/ranking'} element={<Ranking />} />
     </Routes>
     </BrowserRouter>
   );

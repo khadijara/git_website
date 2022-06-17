@@ -26,8 +26,14 @@ export const Menu = [
         url: '/Contact',
         classname: 'header-links',
     },
+    // {
+    //     id: 5,
+    //     title: 'Ranking',
+    //     url: '/ranking',
+    //     classname: 'header-links',
+    // },
     {
-        id: 5,
+        id: 6,
         title: 'Register',
         url: '/login',
         classname: 'header-links-mbl',
