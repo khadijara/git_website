@@ -96,7 +96,7 @@ export function Update() {
         <>
         <div className='container1'>
             <div className='goback'>
-            <Link to={'/off_World'} > Go Back</Link>
+            <Link to={'/off_World'} > Go Back</Link> 
             </div>
         
         <div className="container">
