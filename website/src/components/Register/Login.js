@@ -82,7 +82,6 @@ export function Login(){
             }
             const responseJson = await response.json();
             console.log(responseJson);
-            alert("You are logged in" + user.Email);
     } catch (error) {                                                      //if there is an error
         console.error('Error:', error.message);
     }

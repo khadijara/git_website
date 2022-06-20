@@ -16,7 +16,6 @@ export function Cart() {
                     'Content-Type': 'application/json',
                 }, 
                 body:  JSON.stringify(),
-                
             });
             if (!response.ok) {
                 throw new Error('Request Failed');
@@ -81,7 +80,7 @@ export function Cart() {
     </>
 
     
-  );
+);
 }
 
 export default Cart;
